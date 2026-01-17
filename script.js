@@ -1,4 +1,4 @@
- const quizData = [
+const quizData = [
     {question: "1. What is the first step at a crime scene?", options: ["Collect evidence", "Interview witnesses", "Secure the scene", "Take photos"], answer: "Secure the scene"},
     {question: "2. Who is responsible for documenting the crime scene?", options: ["Police officer", "Detective", "Forensic investigator", "Witness"], answer: "Forensic investigator"},
     {question: "3. What should be worn to prevent contamination?", options: ["Gloves", "Hat", "Jacket", "Shoes"], answer: "Gloves"},
@@ -30,70 +30,6 @@
     {question: "29. What is a logbook used for at the crime scene?", options: ["List of suspects", "Record people entering/exiting", "Sketching the scene", "Evidence collection"], answer: "Record people entering/exiting"},
     {question: "30. Which of the following best defines contamination?", options: ["Evidence destroyed by fire", "Evidence altered by outside factors", "Evidence photographed", "Evidence packaged"], answer: "Evidence altered by outside factors"}
 ];
-
-let currentQuestion = 0;
-let score = 0;
-
-const questionEl = document.getElementById('question');
-const optionsEl = document.getElementById('options');
-const nextBtn = document.getElementById('next-btn');
-const resultContainer = document.getElementById('result-container');
-const quizContainer = document.getElementById('quiz-container');
-const scoreEl = document.getElementById('score');
-
-function loadQuestion() {
-    const currentQuiz = quizData[currentQuestion];
-    questionEl.textContent = currentQuiz.question;
-    optionsEl.innerHTML = '';
-    currentQuiz.options.forEach(option => {
-        const button = document.createElement('button');
-        button.textContent = option;
-        button.classList.add('option-btn');
-        button.addEventListener('click', () => selectOption(option));
-        optionsEl.appendChild(button);
-    });
-}
-
-function selectOption(selected) {
-    const currentQuiz = quizData[currentQuestion];
-    if(selected === currentQuiz.answer){
-        score++;
-    }
-    currentQuestion++;
-    if(currentQuestion < quizData.length){
-        loadQuestion();
-    } else {
-        showResult();
-    }
-}
-
-function showResult() {
-    quizContainer.classList.add('hidden');
-    resultContainer.classList.remove('hidden');
-    scoreEl.textContent = score;
-}
-
-function restartQuiz() {
-    currentQuestion = 0;
-    score = 0;
-    resultContainer.classList.add('hidden');
-    quizContainer.classList.remove('hidden');
-    loadQuestion();
-}
-
-// Initialize first question
-loadQuestion();
-
-];
-
-// Fill in questions up to 30 for a complete exam
-for(let i = 6; i <= 30; i++){
-    quizData.push({
-        question: `${i}. Sample question ${i}?`,
-        options: ["Option A", "Option B", "Option C", "Option D"],
-        answer: "Option A"
-    });
-}
 
 let currentQuestion = 0;
 let score = 0;

@@ -1,85 +1,85 @@
-const quizData = [
-    {question: "1. What is the first step at a crime scene?", options: ["Collect evidence", "Interview witnesses", "Secure the scene", "Take photos"], answer: "Secure the scene"},
-    {question: "2. Who is responsible for documenting the crime scene?", options: ["Police officer", "Detective", "Forensic investigator", "Witness"], answer: "Forensic investigator"},
-    {question: "3. What should be worn to prevent contamination?", options: ["Gloves", "Hat", "Jacket", "Shoes"], answer: "Gloves"},
-    {question: "4. How should evidence be collected?", options: ["Randomly", "Systematically", "Quickly", "Without gloves"], answer: "Systematically"},
-    {question: "5. What is the chain of custody?", options: ["Order of evidence collection", "History of evidence handling", "Evidence labeling", "Crime scene diagram"], answer: "History of evidence handling"},
-    {question: "6. Why is it important to photograph a crime scene?", options: ["To replace sketches", "To have visual documentation", "To impress the jury", "To practice camera skills"], answer: "To have visual documentation"},
-    {question: "7. What type of evidence is hair?", options: ["Documentary", "Biological", "Trace", "Physical"], answer: "Biological"},
-    {question: "8. Who usually takes fingerprints at a crime scene?", options: ["Patrol officer", "Detective", "Forensic team", "Witness"], answer: "Forensic team"},
-    {question: "9. What is the purpose of a crime scene sketch?", options: ["Replace photographs", "Show spatial relationships", "List suspects", "Record statements"], answer: "Show spatial relationships"},
-    {question: "10. Which item should NOT be done at a crime scene?", options: ["Collect evidence", "Secure the area", "Eat or drink", "Take notes"], answer: "Eat or drink"},
-    {question: "11. What is trace evidence?", options: ["Large objects", "Evidence found in small amounts", "Only fingerprints", "Digital evidence"], answer: "Evidence found in small amounts"},
-    {question: "12. Why must evidence be labeled immediately?", options: ["For visual appeal", "To ensure proper chain of custody", "To confuse suspects", "To speed up trial"], answer: "To ensure proper chain of custody"},
-    {question: "13. What is the primary goal of a crime scene investigator?", options: ["Arrest suspects", "Collect and preserve evidence", "Interview witnesses", "Write reports only"], answer: "Collect and preserve evidence"},
-    {question: "14. How should biological evidence be stored?", options: ["Plastic bag", "Paper bag", "Open tray", "Any container"], answer: "Paper bag"},
-    {question: "15. When is a preliminary survey done?", options: ["After collecting evidence", "Before securing scene", "Upon arrival at scene", "After cleaning"], answer: "Upon arrival at scene"},
-    {question: "16. Which of the following is an example of physical evidence?", options: ["Witness testimony", "DNA", "Weapon", "Suspect statement"], answer: "Weapon"},
-    {question: "17. What should be done with a fragile piece of evidence?", options: ["Handle it carefully", "Ignore it", "Leave it for later", "Place in water"], answer: "Handle it carefully"},
-    {question: "18. Why is it important to limit access to a crime scene?", options: ["Reduce contamination", "Keep curiosity high", "Impress the media", "Control lighting"], answer: "Reduce contamination"},
-    {question: "19. Which tool is used to lift fingerprints?", options: ["Tweezers", "Camera", "Powder and tape", "Scissors"], answer: "Powder and tape"},
-    {question: "20. What is the role of a forensic pathologist at a crime scene?", options: ["Interview suspects", "Analyze evidence", "Examine bodies", "Write reports only"], answer: "Examine bodies"},
-    {question: "21. Which document describes the entire crime scene in writing?", options: ["Crime scene sketch", "Field notes", "Report only", "Evidence log"], answer: "Field notes"},
-    {question: "22. What is secondary crime scene?", options: ["Main location of crime", "Another location related to crime", "Witness home", "Police station"], answer: "Another location related to crime"},
-    {question: "23. How should liquids at a crime scene be collected?", options: ["In sealed containers", "Absorbed with cloth", "Poured down drain", "Ignored"], answer: "In sealed containers"},
-    {question: "24. Who authorizes the release of a crime scene?", options: ["Detective", "Forensic officer", "Lead investigator", "Patrol officer"], answer: "Lead investigator"},
-    {question: "25. What is a presumptive test used for?", options: ["Confirm evidence", "Quickly suggest evidence type", "Photograph evidence", "Label evidence"], answer: "Quickly suggest evidence type"},
-    {question: "26. Which of these is an example of circumstantial evidence?", options: ["Fingerprints", "Eyewitness account", "Bloodstain patterns", "Video footage"], answer: "Bloodstain patterns"},
-    {question: "27. Why is it important to document evidence location?", options: ["For courtroom presentation", "For decoration", "To confuse suspects", "To reduce workload"], answer: "For courtroom presentation"},
-    {question: "28. How should fragile evidence like glass be packaged?", options: ["Paper container", "Plastic bag", "Solid box", "Open tray"], answer: "Solid box"},
-    {question: "29. What is a logbook used for at the crime scene?", options: ["List of suspects", "Record people entering/exiting", "Sketching the scene", "Evidence collection"], answer: "Record people entering/exiting"},
-    {question: "30. Which of the following best defines contamination?", options: ["Evidence destroyed by fire", "Evidence altered by outside factors", "Evidence photographed", "Evidence packaged"], answer: "Evidence altered by outside factors"}
-];
+document.addEventListener("DOMContentLoaded", function() {
+    const quizData = [
+        {question: "1. What is the first step at a crime scene?", options: ["Collect evidence", "Interview witnesses", "Secure the scene", "Take photos"], answer: "Secure the scene"},
+        {question: "2. Who is responsible for documenting the crime scene?", options: ["Police officer", "Detective", "Forensic investigator", "Witness"], answer: "Forensic investigator"},
+        {question: "3. What should be worn to prevent contamination?", options: ["Gloves", "Hat", "Jacket", "Shoes"], answer: "Gloves"},
+        {question: "4. How should evidence be collected?", options: ["Randomly", "Systematically", "Quickly", "Without gloves"], answer: "Systematically"},
+        {question: "5. What is the chain of custody?", options: ["Order of evidence collection", "History of evidence handling", "Evidence labeling", "Crime scene diagram"], answer: "History of evidence handling"},
+        {question: "6. Why is it important to photograph a crime scene?", options: ["To replace sketches", "To have visual documentation", "To impress the jury", "To practice camera skills"], answer: "To have visual documentation"},
+        {question: "7. What type of evidence is hair?", options: ["Documentary", "Biological", "Trace", "Physical"], answer: "Biological"},
+        {question: "8. Who usually takes fingerprints at a crime scene?", options: ["Patrol officer", "Detective", "Forensic team", "Witness"], answer: "Forensic team"},
+        {question: "9. What is the purpose of a crime scene sketch?", options: ["Replace photographs", "Show spatial relationships", "List suspects", "Record statements"], answer: "Show spatial relationships"},
+        {question: "10. Which item should NOT be done at a crime scene?", options: ["Collect evidence", "Secure the area", "Eat or drink", "Take notes"], answer: "Eat or drink"},
+        {question: "11. What is trace evidence?", options: ["Large objects", "Evidence found in small amounts", "Only fingerprints", "Digital evidence"], answer: "Evidence found in small amounts"},
+        {question: "12. Why must evidence be labeled immediately?", options: ["For visual appeal", "To ensure proper chain of custody", "To confuse suspects", "To speed up trial"], answer: "To ensure proper chain of custody"},
+        {question: "13. What is the primary goal of a crime scene investigator?", options: ["Arrest suspects", "Collect and preserve evidence", "Interview witnesses", "Write reports only"], answer: "Collect and preserve evidence"},
+        {question: "14. How should biological evidence be stored?", options: ["Plastic bag", "Paper bag", "Open tray", "Any container"], answer: "Paper bag"},
+        {question: "15. When is a preliminary survey done?", options: ["After collecting evidence", "Before securing scene", "Upon arrival at scene", "After cleaning"], answer: "Upon arrival at scene"},
+        {question: "16. Which of the following is an example of physical evidence?", options: ["Witness testimony", "DNA", "Weapon", "Suspect statement"], answer: "Weapon"},
+        {question: "17. What should be done with a fragile piece of evidence?", options: ["Handle it carefully", "Ignore it", "Leave it for later", "Place in water"], answer: "Handle it carefully"},
+        {question: "18. Why is it important to limit access to a crime scene?", options: ["Reduce contamination", "Keep curiosity high", "Impress the media", "Control lighting"], answer: "Reduce contamination"},
+        {question: "19. Which tool is used to lift fingerprints?", options: ["Tweezers", "Camera", "Powder and tape", "Scissors"], answer: "Powder and tape"},
+        {question: "20. What is the role of a forensic pathologist at a crime scene?", options: ["Interview suspects", "Analyze evidence", "Examine bodies", "Write reports only"], answer: "Examine bodies"},
+        {question: "21. Which document describes the entire crime scene in writing?", options: ["Crime scene sketch", "Field notes", "Report only", "Evidence log"], answer: "Field notes"},
+        {question: "22. What is secondary crime scene?", options: ["Main location of crime", "Another location related to crime", "Witness home", "Police station"], answer: "Another location related to crime"},
+        {question: "23. How should liquids at a crime scene be collected?", options: ["In sealed containers", "Absorbed with cloth", "Poured down drain", "Ignored"], answer: "In sealed containers"},
+        {question: "24. Who authorizes the release of a crime scene?", options: ["Detective", "Forensic officer", "Lead investigator", "Patrol officer"], answer: "Lead investigator"},
+        {question: "25. What is a presumptive test used for?", options: ["Confirm evidence", "Quickly suggest evidence type", "Photograph evidence", "Label evidence"], answer: "Quickly suggest evidence type"},
+        {question: "26. Which of these is an example of circumstantial evidence?", options: ["Fingerprints", "Eyewitness account", "Bloodstain patterns", "Video footage"], answer: "Bloodstain patterns"},
+        {question: "27. Why is it important to document evidence location?", options: ["For courtroom presentation", "For decoration", "To confuse suspects", "To reduce workload"], answer: "For courtroom presentation"},
+        {question: "28. How should fragile evidence like glass be packaged?", options: ["Paper container", "Plastic bag", "Solid box", "Open tray"], answer: "Solid box"},
+        {question: "29. What is a logbook used for at the crime scene?", options: ["List of suspects", "Record people entering/exiting", "Sketching the scene", "Evidence collection"], answer: "Record people entering/exiting"},
+        {question: "30. Which of the following best defines contamination?", options: ["Evidence destroyed by fire", "Evidence altered by outside factors", "Evidence photographed", "Evidence packaged"], answer: "Evidence altered by outside factors"}
+    ];
 
-let currentQuestion = 0;
-let score = 0;
+    let currentQuestion = 0;
+    let score = 0;
 
-const questionEl = document.getElementById('question');
-const optionsEl = document.getElementById('options');
-const nextBtn = document.getElementById('next-btn');
-const resultContainer = document.getElementById('result-container');
-const quizContainer = document.getElementById('quiz-container');
-const scoreEl = document.getElementById('score');
+    const questionEl = document.getElementById('question');
+    const optionsEl = document.getElementById('options');
+    const resultContainer = document.getElementById('result-container');
+    const quizContainer = document.getElementById('quiz-container');
+    const scoreEl = document.getElementById('score');
 
-function loadQuestion() {
-    const currentQuiz = quizData[currentQuestion];
-    questionEl.textContent = currentQuiz.question;
-    optionsEl.innerHTML = '';
-    currentQuiz.options.forEach(option => {
-        const button = document.createElement('button');
-        button.textContent = option;
-        button.classList.add('option-btn');
-        button.addEventListener('click', () => selectOption(option));
-        optionsEl.appendChild(button);
-    });
-}
-
-function selectOption(selected) {
-    const currentQuiz = quizData[currentQuestion];
-    if(selected === currentQuiz.answer){
-        score++;
+    function loadQuestion() {
+        const currentQuiz = quizData[currentQuestion];
+        questionEl.textContent = currentQuiz.question;
+        optionsEl.innerHTML = '';
+        currentQuiz.options.forEach(option => {
+            const button = document.createElement('button');
+            button.textContent = option;
+            button.classList.add('option-btn');
+            button.addEventListener('click', () => selectOption(option));
+            optionsEl.appendChild(button);
+        });
     }
-    currentQuestion++;
-    if(currentQuestion < quizData.length){
+
+    function selectOption(selected) {
+        const currentQuiz = quizData[currentQuestion];
+        if(selected === currentQuiz.answer){
+            score++;
+        }
+        currentQuestion++;
+        if(currentQuestion < quizData.length){
+            loadQuestion();
+        } else {
+            showResult();
+        }
+    }
+
+    function showResult() {
+        quizContainer.classList.add('hidden');
+        resultContainer.classList.remove('hidden');
+        scoreEl.textContent = score;
+    }
+
+    window.restartQuiz = function() {
+        currentQuestion = 0;
+        score = 0;
+        resultContainer.classList.add('hidden');
+        quizContainer.classList.remove('hidden');
         loadQuestion();
-    } else {
-        showResult();
     }
-}
 
-function showResult() {
-    quizContainer.classList.add('hidden');
-    resultContainer.classList.remove('hidden');
-    scoreEl.textContent = score;
-}
-
-function restartQuiz() {
-    currentQuestion = 0;
-    score = 0;
-    resultContainer.classList.add('hidden');
-    quizContainer.classList.remove('hidden');
     loadQuestion();
-}
-
-// Initialize first question
-loadQuestion();
+});

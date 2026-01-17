@@ -12,10 +12,10 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
 }
 
 h1, h2 {
-    text-align: center;
     color: #333;
 }
 
@@ -33,28 +33,14 @@ h1, h2 {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background 0.3s;
 }
 
 .option-btn:hover {
     background-color: #d1d1d1;
 }
 
-#next-btn {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 30px;
-    font-size: 16px;
-    background-color: #0077ff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#next-btn:hover {
-    background-color: #005ecc;
-}
-
 .hidden {
     display: none;
 }
+
